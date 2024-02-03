@@ -10,7 +10,7 @@ const StartupSignUp = () => {
   const handleSignUp = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/signup/startup",
+        "https://fundrev-backend-5plm.onrender.com/signup/startup",
         {
           method: "POST",
           headers: {

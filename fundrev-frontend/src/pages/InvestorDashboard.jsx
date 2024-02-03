@@ -13,7 +13,7 @@ const InvestorDashboard = () => {
   const handleInterest = async (startup_id) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/interested/${investorId}/${startup_id}`,
+        `https://fundrev-backend-5plm.onrender.com/interested/${investorId}/${startup_id}`,
         {
           method: "POST",
         }
@@ -34,7 +34,7 @@ const InvestorDashboard = () => {
   const fetchInvestorInterest = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/getinvestorDetail/${investorId}`,
+        `https://fundrev-backend-5plm.onrender.com/getinvestorDetail/${investorId}`,
         {
           method: "GET",
         }
@@ -52,7 +52,7 @@ const InvestorDashboard = () => {
     setInvestorId(localStorage.getItem("investorId"));
     const fetchStartups = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/getstartup", {
+        const response = await fetch("https://fundrev-backend-5plm.onrender.com/getstartup", {
           method: "GET",
         });
 

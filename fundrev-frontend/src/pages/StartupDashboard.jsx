@@ -10,7 +10,7 @@ const StartupDashboard = () => {
   const getChart = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/getstartupDetail/${startupId}`,
+        `https://fundrev-backend-5plm.onrender.com/getstartupDetail/${startupId}`,
         {
           method: "GET",
         }
@@ -38,7 +38,7 @@ const StartupDashboard = () => {
       formData.append("salesFile", file);
 
       const response = await fetch(
-        `http://127.0.0.1:5000/upload-sales/${startupId}`,
+        `https://fundrev-backend-5plm.onrender.com/upload-sales/${startupId}`,
         {
           method: "POST",
           body: formData,
